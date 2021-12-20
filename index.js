@@ -64,6 +64,36 @@ const questions = () => {
                 }
             }
         },
+        {
+            type: 'list',
+            name: 'license',
+            message: 'What license is placed on this project?',
+            choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unilicense']  
+        },
+        {
+            type: 'input',
+            name: 'username',
+            message: 'What is your GitHub username?',
+            validate: userInput => {
+                if (userInput) {
+                    return true;
+                }else{
+                    console.log('Please enter a username!');
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email address?',
+            validate: userInput => {
+                if (userInput) {
+                    return true;
+                }else{
+                    console.log('Please enter a email address!');
+                }
+            }
+        }
     ])
 };
 
